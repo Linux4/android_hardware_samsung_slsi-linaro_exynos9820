@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+ifeq ($(TARGET_SLSI_VARIANT),linaro)
 ifeq ($(TARGET_SOC_BASE), exynos9820)
 exynos9820_dirs := \
 	libkeymaster
@@ -30,4 +31,5 @@ endif
 
 include $(call all-named-subdir-makefiles,$(exynos9820_dirs))
 
+endif
 endif
