@@ -1,0 +1,58 @@
+cc_library_shared {
+    name: "libMcClient",
+    proprietary: true,
+
+    srcs: [
+        "src/*.cpp",
+    ],
+
+    shared_libs: [
+        "liblog",
+    ],
+
+    cflags: [
+        "-Werror",
+        "-Wall",
+        "-Wextra",
+        "-fvisibility=hidden",
+        "-DTBASE_API_LEVEL=9",
+    ] + ["-std=c++11"],
+
+    local_include_dirs: [
+         "include",
+         "include/GP",
+    ],
+
+    export_include_dirs: [
+         "include",
+         "include/GP",
+    ],
+}
+
+cc_library_static {
+    name: "libMcClient_static",
+    proprietary: true,
+
+    srcs: [
+        "src/*.cpp",
+    ],
+
+    cflags: [
+        "-Werror",
+        "-Wall",
+        "-Wextra",
+        "-fvisibility=hidden",
+        "-DTBASE_API_LEVEL=5",
+        "-DWITHOUT_PROXY",
+    ] + ["-std=c++11"],
+
+    local_include_dirs: [
+         "include",
+         "include/GP",
+    ],
+
+    export_include_dirs: [
+         "include",
+         "include/GP",
+    ],
+}

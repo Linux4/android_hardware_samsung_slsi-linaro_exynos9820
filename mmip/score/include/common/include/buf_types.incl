@@ -1,0 +1,65 @@
+//------------------------------------------------------------------------------
+/// @file  sc_buf_type.h
+/// @ingroup  include
+///
+/// @brief  Defines of structures related with data buffer
+/// @internal
+/// @author  Rakie Kim<rakie.kim@samsung.com>
+///
+/// @section changelog Change Log
+/// 2016/04/12 Rakie Kim created
+///
+/// @section copyright_section Copyright
+/// &copy; 2016, Samsung Electronics Co., Ltd.
+///
+/// @section license_section License
+///
+//------------------------------------------------------------------------------
+
+// DECLARE_IMAGE_FORMAT(IDX, IMG_FORMAT_NAME, PLANE0, PLANE1, PLANE2, PLANE3)
+
+DECLARE_IMAGE_FORMAT(0,  SC_BGR,      24, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(1,  SC_BGR565,   16, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(2,  SC_BGRA,     32, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(3,  SC_ARGB,     32, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(4,  SC_ARGB4444, 16, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(5,  SC_RGB,      24, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(6,  SC_RGB565,   16, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(7,  SC_RGBA,     32, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(8,  SC_RGB8,     8,  0,  0, 0)
+DECLARE_IMAGE_FORMAT(9,  SC_YUV4,     8,  8,  8, 0)
+DECLARE_IMAGE_FORMAT(10, SC_YV16,     8,  4,  4, 0)
+DECLARE_IMAGE_FORMAT(11, SC_YV12,     8,  2,  2, 0)
+DECLARE_IMAGE_FORMAT(12, SC_IYUV,     8,  2,  2, 0)
+DECLARE_IMAGE_FORMAT(13, SC_NV12,     8,  4,  0, 0)
+DECLARE_IMAGE_FORMAT(14, SC_NV21,     8,  4,  0, 0)
+DECLARE_IMAGE_FORMAT(15, SC_NV16,     8,  8,  0, 0)
+DECLARE_IMAGE_FORMAT(16, SC_YUV444pp, 8,  16, 0, 0)
+DECLARE_IMAGE_FORMAT(17, SC_UYVY,     8,  4,  4, 0)
+DECLARE_IMAGE_FORMAT(18, SC_YUYV,     8,  4,  4, 0)
+DECLARE_IMAGE_FORMAT(19, SC_YVU,      0,  0,  0, 0)
+DECLARE_IMAGE_FORMAT(20, SC_YVUINTLV, 0,  0,  0, 0)
+DECLARE_IMAGE_FORMAT(21, SC_LAB,      0,  0,  0, 0)
+DECLARE_IMAGE_FORMAT(22, SC_HSV,      8,  8,  8, 0)
+DECLARE_IMAGE_FORMAT(23, SC_H1V1,     0,  0,  0, 0)
+DECLARE_IMAGE_FORMAT(24, SC_H1V2,     0,  0,  0, 0)
+DECLARE_IMAGE_FORMAT(25, SC_H2V1,     0,  0,  0, 0)
+DECLARE_IMAGE_FORMAT(26, SC_H2V2,     0,  0,  0, 0)
+DECLARE_IMAGE_FORMAT(27, SC_TYPE_S8,  8,  0,  0, 0)
+DECLARE_IMAGE_FORMAT(28, SC_TYPE_U8,  8,  0,  0, 0)
+DECLARE_IMAGE_FORMAT(29, SC_TYPE_S16, 16, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(30, SC_TYPE_U16, 16, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(31, SC_TYPE_S32, 32, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(32, SC_TYPE_U32, 32, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(33, SC_TYPE_F32, 32, 0,  0, 0)
+DECLARE_IMAGE_FORMAT(34, SC_TYPE_VIR, 32, 0,  0, 0)
+
+// special types
+DECLARE_IMAGE_FORMAT(35, SC_TYPE_RANDOM, 32, 0, 0, 0)
+DECLARE_IMAGE_FORMAT(36, SC_TYPE_NONE,   0,  0, 0, 0)
+
+// extra aliases
+#define SC_GRAY  SC_TYPE_U8
+
+#define SC_TYPE_MIN_ID (0)
+#define SC_TYPE_MAX_ID (36)

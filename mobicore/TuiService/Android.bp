@@ -1,0 +1,76 @@
+//
+// build libTui
+// /* ExySp */
+// ifeq ($(BOARD_SUPPORT_TUI), true)
+soong_namespace{
+}
+
+cc_library_shared {
+
+    // Module name (sets name of output binary / library)
+    name: "libTui",
+    proprietary: true,
+
+    srcs: [
+        "jni/tlcTui.cpp",
+        "jni/tlcTuiJni.cpp",
+    ],
+
+    // Needed to use Trustonic logging macros
+    shared_libs: ["//hardware/samsung_slsi/exynos9820/mobicore:libMcClient"] + ["liblog"],
+
+    // Enable logging to logcat per default
+
+    cflags: ["-UNDEBUG"] + ["-DLOG_ANDROID"],
+
+    host_ldlibs: ["-llog"],
+
+}
+
+//
+// build TuiService
+//
+
+android_app {
+    name: "TuiService",
+
+    srcs: ["java/**/*.java"],
+    jni_libs: ["libTui"],
+
+    // WARNING: Module tags are not supported in Soong.
+    // Add this module to PRODUCT_PACKAGES_DEBUG in your product file if you want to
+    // force installation for -userdebug and -eng builds.
+    // WARNING: Module tags are not supported in Soong.
+    // Add this module to PRODUCT_PACKAGES_ENG in your product file if you want to
+    // force installation for -eng builds.
+    certificate: "platform",
+    system_ext_specific: true,
+    platform_apis: true,
+
+    dex_preopt: {
+        enabled: false,
+    },
+
+    /* ExySp : Trustonic would added below path */
+    optimize: {
+        proguard_flags: [
+            "-include proguard-project.txt",
+        ],
+    },
+
+}
+
+// =============================================================================
+
+// adding the root folder to the search path appears to make absolute paths
+// work for import-module - lets see how long this works and what surprises
+// future developers get from this.
+// ANDROIDMK TRANSLATION ERROR: unsupported line
+// $(call import-add-path,/)
+
+// ANDROIDMK TRANSLATION ERROR: unsupported line
+// $(call import-module,$(COMP_PATH_MobiCoreClientLib_module))
+
+// /* ExySp */
+// ANDROIDMK TRANSLATION ERROR: endif from unsupported conditional
+// endif

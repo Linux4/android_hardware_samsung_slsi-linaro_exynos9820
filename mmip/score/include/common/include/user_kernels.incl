@@ -1,0 +1,931 @@
+//------------------------------------------------------------------------------
+/// @file  user_kernels.incl
+/// @ingroup  include
+///
+/// @brief  User kernel porting layer
+/// @internal
+/// @author  Aleksiej Chrabrow <a.chrabrow@partner.samsung.com>
+///
+/// @section changelog Change Log
+/// 2017/07/14 Aleksiej Chrabrow created
+///
+/// @section copyright_section Copyright
+/// &copy; 2017, Samsung Electronics Co., Ltd.
+///
+/// @section license_section License
+///
+//------------------------------------------------------------------------------
+
+#include "sc_control.h"
+
+// default handler declarations
+sc_status_t no_k_fn(kc_context*);
+sc_status_t no_cti_fn(kc_context*);
+
+//--------------------------
+// Kernel handlers
+//--------------------------
+
+#ifndef USR_KERNEL_1_FUNC
+#define USR_KERNEL_1_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_1_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_2_FUNC
+#define USR_KERNEL_2_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_2_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_3_FUNC
+#define USR_KERNEL_3_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_3_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_4_FUNC
+#define USR_KERNEL_4_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_4_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_5_FUNC
+#define USR_KERNEL_5_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_5_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_6_FUNC
+#define USR_KERNEL_6_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_6_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_7_FUNC
+#define USR_KERNEL_7_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_7_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_8_FUNC
+#define USR_KERNEL_8_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_8_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_9_FUNC
+#define USR_KERNEL_9_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_9_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_10_FUNC
+#define USR_KERNEL_10_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_10_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_11_FUNC
+#define USR_KERNEL_11_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_11_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_12_FUNC
+#define USR_KERNEL_12_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_12_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_13_FUNC
+#define USR_KERNEL_13_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_13_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_14_FUNC
+#define USR_KERNEL_14_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_14_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_15_FUNC
+#define USR_KERNEL_15_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_15_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_16_FUNC
+#define USR_KERNEL_16_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_16_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_17_FUNC
+#define USR_KERNEL_17_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_17_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_18_FUNC
+#define USR_KERNEL_18_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_18_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_19_FUNC
+#define USR_KERNEL_19_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_19_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_20_FUNC
+#define USR_KERNEL_20_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_20_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_21_FUNC
+#define USR_KERNEL_21_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_21_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_22_FUNC
+#define USR_KERNEL_22_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_22_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_23_FUNC
+#define USR_KERNEL_23_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_3_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_24_FUNC
+#define USR_KERNEL_24_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_24_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_25_FUNC
+#define USR_KERNEL_25_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_25_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_26_FUNC
+#define USR_KERNEL_26_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_26_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_27_FUNC
+#define USR_KERNEL_27_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_27_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_28_FUNC
+#define USR_KERNEL_28_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_28_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_29_FUNC
+#define USR_KERNEL_29_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_29_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_30_FUNC
+#define USR_KERNEL_30_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_30_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_31_FUNC
+#define USR_KERNEL_31_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_31_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_32_FUNC
+#define USR_KERNEL_32_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_32_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_33_FUNC
+#define USR_KERNEL_33_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_33_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_34_FUNC
+#define USR_KERNEL_34_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_34_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_35_FUNC
+#define USR_KERNEL_35_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_35_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_36_FUNC
+#define USR_KERNEL_36_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_36_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_37_FUNC
+#define USR_KERNEL_37_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_37_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_38_FUNC
+#define USR_KERNEL_38_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_38_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_39_FUNC
+#define USR_KERNEL_39_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_39_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_40_FUNC
+#define USR_KERNEL_40_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_40_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_41_FUNC
+#define USR_KERNEL_41_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_41_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_42_FUNC
+#define USR_KERNEL_42_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_42_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_43_FUNC
+#define USR_KERNEL_43_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_43_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_44_FUNC
+#define USR_KERNEL_44_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_44_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_45_FUNC
+#define USR_KERNEL_45_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_45_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_46_FUNC
+#define USR_KERNEL_46_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_46_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_47_FUNC
+#define USR_KERNEL_47_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_47_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_48_FUNC
+#define USR_KERNEL_48_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_48_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_49_FUNC
+#define USR_KERNEL_49_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_49_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_50_FUNC
+#define USR_KERNEL_50_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_50_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_51_FUNC
+#define USR_KERNEL_51_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_51_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_52_FUNC
+#define USR_KERNEL_52_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_52_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_53_FUNC
+#define USR_KERNEL_53_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_53_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_54_FUNC
+#define USR_KERNEL_54_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_54_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_55_FUNC
+#define USR_KERNEL_55_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_55_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_56_FUNC
+#define USR_KERNEL_56_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_56_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_57_FUNC
+#define USR_KERNEL_57_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_57_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_58_FUNC
+#define USR_KERNEL_58_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_58_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_59_FUNC
+#define USR_KERNEL_59_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_59_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_60_FUNC
+#define USR_KERNEL_60_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_60_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_61_FUNC
+#define USR_KERNEL_61_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_61_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_62_FUNC
+#define USR_KERNEL_62_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_62_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_63_FUNC
+#define USR_KERNEL_63_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_63_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_64_FUNC
+#define USR_KERNEL_64_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_64_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_65_FUNC
+#define USR_KERNEL_65_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_65_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_66_FUNC
+#define USR_KERNEL_66_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_66_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_67_FUNC
+#define USR_KERNEL_67_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_67_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_68_FUNC
+#define USR_KERNEL_68_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_68_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_69_FUNC
+#define USR_KERNEL_69_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_69_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_70_FUNC
+#define USR_KERNEL_70_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_70_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_71_FUNC
+#define USR_KERNEL_71_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_71_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_72_FUNC
+#define USR_KERNEL_72_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_72_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_73_FUNC
+#define USR_KERNEL_73_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_73_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_74_FUNC
+#define USR_KERNEL_74_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_74_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_75_FUNC
+#define USR_KERNEL_75_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_75_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_76_FUNC
+#define USR_KERNEL_76_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_76_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_77_FUNC
+#define USR_KERNEL_77_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_77_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_78_FUNC
+#define USR_KERNEL_78_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_78_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_79_FUNC
+#define USR_KERNEL_79_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_79_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_80_FUNC
+#define USR_KERNEL_80_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_80_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_81_FUNC
+#define USR_KERNEL_81_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_81_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_82_FUNC
+#define USR_KERNEL_82_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_82_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_83_FUNC
+#define USR_KERNEL_83_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_83_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_84_FUNC
+#define USR_KERNEL_84_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_84_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_85_FUNC
+#define USR_KERNEL_85_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_85_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_86_FUNC
+#define USR_KERNEL_86_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_86_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_87_FUNC
+#define USR_KERNEL_87_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_87_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_88_FUNC
+#define USR_KERNEL_88_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_88_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_89_FUNC
+#define USR_KERNEL_89_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_89_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_90_FUNC
+#define USR_KERNEL_90_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_90_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_91_FUNC
+#define USR_KERNEL_91_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_91_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_92_FUNC
+#define USR_KERNEL_92_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_92_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_93_FUNC
+#define USR_KERNEL_93_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_93_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_94_FUNC
+#define USR_KERNEL_94_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_94_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_95_FUNC
+#define USR_KERNEL_95_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_95_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_96_FUNC
+#define USR_KERNEL_96_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_96_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_97_FUNC
+#define USR_KERNEL_97_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_97_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_98_FUNC
+#define USR_KERNEL_98_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_98_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_99_FUNC
+#define USR_KERNEL_99_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_99_FUNC(kc_context*);
+#endif
+
+#ifndef USR_KERNEL_100_FUNC
+#define USR_KERNEL_100_FUNC no_k_fn
+#else
+sc_status_t USR_KERNEL_100_FUNC(kc_context*);
+#endif
+
+//--------------------------
+// CTI handlers
+//--------------------------
+
+#ifndef USR_CTI_1_FUNC
+#define USR_CTI_1_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_1_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_2_FUNC
+#define USR_CTI_2_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_2_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_3_FUNC
+#define USR_CTI_3_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_3_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_4_FUNC
+#define USR_CTI_4_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_4_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_5_FUNC
+#define USR_CTI_5_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_5_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_6_FUNC
+#define USR_CTI_6_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_6_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_7_FUNC
+#define USR_CTI_7_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_7_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_8_FUNC
+#define USR_CTI_8_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_8_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_9_FUNC
+#define USR_CTI_9_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_9_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_10_FUNC
+#define USR_CTI_10_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_10_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_11_FUNC
+#define USR_CTI_11_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_11_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_12_FUNC
+#define USR_CTI_12_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_12_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_13_FUNC
+#define USR_CTI_13_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_13_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_14_FUNC
+#define USR_CTI_14_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_14_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_15_FUNC
+#define USR_CTI_15_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_15_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_16_FUNC
+#define USR_CTI_16_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_16_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_17_FUNC
+#define USR_CTI_17_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_17_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_18_FUNC
+#define USR_CTI_18_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_18_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_19_FUNC
+#define USR_CTI_19_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_19_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_20_FUNC
+#define USR_CTI_20_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_20_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_21_FUNC
+#define USR_CTI_21_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_21_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_22_FUNC
+#define USR_CTI_22_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_22_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_23_FUNC
+#define USR_CTI_23_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_23_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_24_FUNC
+#define USR_CTI_24_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_24_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_25_FUNC
+#define USR_CTI_25_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_25_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_26_FUNC
+#define USR_CTI_26_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_26_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_27_FUNC
+#define USR_CTI_27_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_27_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_28_FUNC
+#define USR_CTI_28_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_28_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_29_FUNC
+#define USR_CTI_29_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_29_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_30_FUNC
+#define USR_CTI_30_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_30_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_31_FUNC
+#define USR_CTI_31_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_31_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_32_FUNC
+#define USR_CTI_32_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_32_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_33_FUNC
+#define USR_CTI_33_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_33_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_34_FUNC
+#define USR_CTI_34_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_34_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_35_FUNC
+#define USR_CTI_35_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_35_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_36_FUNC
+#define USR_CTI_36_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_36_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_37_FUNC
+#define USR_CTI_37_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_37_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_38_FUNC
+#define USR_CTI_38_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_38_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_39_FUNC
+#define USR_CTI_39_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_39_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_40_FUNC
+#define USR_CTI_40_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_40_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_41_FUNC
+#define USR_CTI_41_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_41_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_42_FUNC
+#define USR_CTI_42_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_42_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_43_FUNC
+#define USR_CTI_43_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_43_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_44_FUNC
+#define USR_CTI_44_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_44_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_45_FUNC
+#define USR_CTI_45_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_45_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_46_FUNC
+#define USR_CTI_46_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_46_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_47_FUNC
+#define USR_CTI_47_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_47_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_48_FUNC
+#define USR_CTI_48_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_48_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_49_FUNC
+#define USR_CTI_49_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_49_FUNC(kc_context*);
+#endif
+
+#ifndef USR_CTI_50_FUNC
+#define USR_CTI_50_FUNC no_cti_fn
+#else
+sc_status_t USR_CTI_50_FUNC(kc_context*);
+#endif
