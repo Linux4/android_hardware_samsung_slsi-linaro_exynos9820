@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2012 The Android Open Source Project
+# Copyright 2014 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,23 +14,15 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_SLSI_VARIANT),linaro)
-ifeq ($(TARGET_SOC_BASE), exynos9820)
-exynos9820_dirs := \
-	libaudio \
-	libkeymaster
+# This contains the module build definitions for the hardware-specific
+# components for this device.
+#
+# As much as possible, those components should be built unconditionally,
+# with device-specific names to avoid collisions, to avoid device-specific
+# bitrot and build breakages. Building a component unconditionally does
+# *not* include it on all devices, so it is safe even with hardware-specific
+# components.
 
-ifneq ($(BOARD_USES_SW_GATEKEEPER),true)
-exynos9820_dirs += libgatekeeper
-endif
+LOCAL_PATH := $(call my-dir)
 
-exynos9820_dirs += mmip
-
-ifeq ($(BOARD_USES_OPENVX), true)
-exynos9820_dirs += openvx
-endif
-
-include $(call all-named-subdir-makefiles,$(exynos9820_dirs))
-
-endif
-endif
+include $(call all-makefiles-under,$(LOCAL_PATH))
