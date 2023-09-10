@@ -1,7 +1,0 @@
-cc_library_static {
-    name: "MobiCoreTlcm",
-    vendor: true,
-    export_include_dirs: [
-        ".",
-    ],
-}

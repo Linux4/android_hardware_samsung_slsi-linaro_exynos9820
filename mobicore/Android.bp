@@ -1,7 +1,0 @@
-soong_namespace {
-}
-
-subdirs = [
-    "ClientLib",
-    "Daemon",
-]
