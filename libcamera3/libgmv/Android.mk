@@ -29,7 +29,7 @@ LOCAL_MODULE_TARGET_ARCH := arm
 
 LOCAL_SRC_FILES := $(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 
-include $(TOP)/hardware/samsung_slsi/exynos/BoardConfigCFlags.mk
+include $(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/BoardConfigCFlags.mk
 include $(BUILD_PREBUILT)
 
 $(warning #############################################)

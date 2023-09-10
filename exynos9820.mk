@@ -58,7 +58,7 @@ ifeq ($(strip $(TARGET_MODEL)),)
 TARGET_MODEL := beyond
 endif
 
-SOVX_TOP_SRC_DIR := hardware/samsung_slsi/exynos9820/openvx/$(TARGET_MODEL)
+SOVX_TOP_SRC_DIR := hardware/samsung_slsi-linaro-linaro/exynos9820/openvx/$(TARGET_MODEL)
 SOVX_TOP_DST_DIR := $(TARGET_COPY_OUT_VENDOR)/openvx
 
 SOVX_COST_SRC_DIR := $(SOVX_TOP_SRC_DIR)/raw/cost

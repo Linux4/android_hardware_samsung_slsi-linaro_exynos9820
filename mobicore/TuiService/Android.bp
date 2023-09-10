@@ -17,7 +17,7 @@ cc_library_shared {
     ],
 
     // Needed to use Trustonic logging macros
-    shared_libs: ["//hardware/samsung_slsi/exynos9820/mobicore:libMcClient"] + ["liblog"],
+    shared_libs: ["//hardware/samsung_slsi-linaro-linaro/exynos9820/mobicore:libMcClient"] + ["liblog"],
 
     // Enable logging to logcat per default
 

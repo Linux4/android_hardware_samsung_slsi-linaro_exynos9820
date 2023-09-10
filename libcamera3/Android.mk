@@ -85,19 +85,19 @@ LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/../libcamera3/SensorInfos \
 	$(TOP)/system/media/camera/include \
 	$(TOP)/system/core/libsync/include \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/9xxx \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2 \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Activities \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Buffers \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/MCPipes \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Pipes2 \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/PostProcessing \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/SensorInfos \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/SizeTables \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Tuning/include \
-	$(TOP)/hardware/samsung_slsi/exynos/include \
-	$(TOP)/hardware/samsung_slsi/$(TARGET_SOC)/include \
-	$(TOP)/hardware/samsung_slsi/$(TARGET_BOARD_PLATFORM)/include \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/9xxx \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2 \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Activities \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Buffers \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/MCPipes \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Pipes2 \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/PostProcessing \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/SensorInfos \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/SizeTables \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Tuning/include \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/include \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/$(TARGET_SOC)/include \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/$(TARGET_BOARD_PLATFORM)/include \
 	$(TOP)/hardware/libhardware_legacy/include/hardware_legacy \
 	$(TOP)/vendor/samsung/configs/feature/CscFeature/libsecnativefeature \
 	$(TOP)/bionic \
@@ -107,15 +107,15 @@ LOCAL_C_INCLUDES += \
 	$(TOP)/frameworks/native/libs/arect/include \
 	$(TOP)/frameworks/native/libs/nativebase/include \
     $(TOP)/hardware/interfaces/camera/common/1.0/default/include \
-	$(TOP)/hardware/samsung_slsi/exynos/libion/include \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libion/include \
 	$(TOP)/hardware/camera/SensorListener
 
 ifeq ($(BOARD_CAMERA_GED_FEATURE), false)
 LOCAL_C_INCLUDES += \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Sec \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Sec/PPUniPlugin \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Sec/Pipes2 \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Sec/Activities \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Sec \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Sec/PPUniPlugin \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Sec/Pipes2 \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Sec/Activities \
 	$(TOP)/hardware/camera/UniPlugin/include \
 	$(TOP)/hardware/camera/UniAPI/include
 endif
@@ -123,9 +123,9 @@ endif
 ifeq ($(BOARD_CAMERA_USES_SLSI_PLUGIN), true)
 LOCAL_CFLAGS += -DUSE_SLSI_PLUGIN
 LOCAL_C_INCLUDES += \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/PlugIn \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/PlugIn/include \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/PlugIn/converter
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/PlugIn \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/PlugIn/include \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/PlugIn/converter
 endif
 
 ifeq ($(BOARD_CAMERA_USES_EFD), true)
@@ -144,8 +144,8 @@ endif
 
 ifeq ($(BOARD_CAMERA_USES_DUAL_CAMERA), true)
 LOCAL_C_INCLUDES += \
-    $(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Fusion \
-    $(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Fusion/DofLut
+    $(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Fusion \
+    $(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Fusion/DofLut
 endif
 
 LOCAL_SRC_FILES = \
@@ -275,10 +275,10 @@ LOCAL_LDFLAGS :=  -Wl,-Bsymbolic
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libexynoscamera3
 
-include $(TOP)/hardware/samsung_slsi/exynos/BoardConfigCFlags.mk
+include $(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/BoardConfigCFlags.mk
 
 ifeq ($(BOARD_CAMERA_USES_SLSI_PLUGIN), true)
-include $(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/PlugIn/converter/libs/Android.mk
+include $(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/PlugIn/converter/libs/Android.mk
 endif
 
 include $(BUILD_SHARED_LIBRARY)
@@ -303,42 +303,42 @@ LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_C_INCLUDES += \
-	$(TOP)/hardware/samsung_slsi/$(TARGET_SOC)/include \
-	$(TOP)/hardware/samsung_slsi/$(TARGET_SOC)/libcamera3 \
-	$(TOP)/hardware/samsung_slsi/$(TARGET_SOC)/libcamera3/SensorInfos \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/$(TARGET_SOC)/include \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/$(TARGET_SOC)/libcamera3 \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/$(TARGET_SOC)/libcamera3/SensorInfos \
 	$(TOP)/system/media/camera/include \
 	$(TOP)/system/core/libsync/include \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/9xxx \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2 \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Activities \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Buffers \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/MCPipes \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Pipes2 \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/PostProcessing \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/SensorInfos \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/SizeTables \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Tuning/include \
-	$(TOP)/hardware/samsung_slsi/exynos/include \
-	$(TOP)/hardware/samsung_slsi/$(TARGET_BOARD_PLATFORM)/include \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/9xxx \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2 \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Activities \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Buffers \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/MCPipes \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Pipes2 \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/PostProcessing \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/SensorInfos \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/SizeTables \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Tuning/include \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/include \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/$(TARGET_BOARD_PLATFORM)/include \
 	$(TOP)/external/libcxx/include \
 	$(TOP)/bionic \
 	$(TOP)/frameworks/native/include \
 	$(TOP)/frameworks/native/libs/nativebase/include \
     $(TOP)/frameworks/native/libs/arect/include \
-	$(TOP)/hardware/samsung_slsi/exynos/libion/include \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libion/include \
     $(TOP)/hardware/interfaces/camera/common/1.0/default/include
 
 ifeq ($(BOARD_CAMERA_USES_DUAL_CAMERA), true)
 LOCAL_C_INCLUDES += \
-    $(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Fusion \
-    $(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Fusion/DofLut
+    $(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Fusion \
+    $(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Fusion/DofLut
 endif
 
 ifeq ($(BOARD_CAMERA_GED_FEATURE), false)
 LOCAL_C_INCLUDES += \
-	$(TOP)/hardware/samsung_slsi/$(TARGET_SOC)/libcamera3/Vendor \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Sec \
-	$(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/Sec/PPUniPlugin \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/$(TARGET_SOC)/libcamera3/Vendor \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Sec \
+	$(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/Sec/PPUniPlugin \
 	$(TOP)/hardware/camera/SensorListener \
 	$(TOP)/hardware/camera/UniPlugin/include \
 	$(TOP)/hardware/camera/UniAPI/include
@@ -408,7 +408,7 @@ $(foreach file,$(LOCAL_SRC_FILES),$(shell touch '$(LOCAL_PATH)/$(file)'))
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := camera.$(TARGET_SOC)
 
-include $(TOP)/hardware/samsung_slsi/exynos/BoardConfigCFlags.mk
+include $(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/BoardConfigCFlags.mk
 include $(BUILD_SHARED_LIBRARY)
 
 $(warning #############################################)
@@ -420,5 +420,5 @@ include $(call all-makefiles-under, $(LOCAL_PATH))
 ifeq ($(BOARD_CAMERA_USES_SLSI_PLUGIN), true)
 #################
 # plugIn
-include $(TOP)/hardware/samsung_slsi/exynos/libcamera3/common_v2/PlugIn/Android.mk
+include $(TOP)/hardware/samsung_slsi-linaro-linaro/exynos/libcamera3/common_v2/PlugIn/Android.mk
 endif

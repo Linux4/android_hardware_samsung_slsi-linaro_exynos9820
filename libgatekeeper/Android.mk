@@ -16,8 +16,8 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-MOBICORE_PATH := hardware/samsung_slsi/$(TARGET_SOC_BASE)/mobicore
-CURRENT_PATH := hardware/samsung_slsi/$(TARGET_SOC_BASE)/libgatekeeper
+MOBICORE_PATH := hardware/samsung_slsi-linaro-linaro/$(TARGET_SOC_BASE)/mobicore
+CURRENT_PATH := hardware/samsung_slsi-linaro-linaro/$(TARGET_SOC_BASE)/libgatekeeper
 
 LOCAL_MODULE := gatekeeper.$(TARGET_SOC)
 
