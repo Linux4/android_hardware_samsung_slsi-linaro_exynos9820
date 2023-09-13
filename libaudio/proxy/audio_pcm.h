@@ -132,7 +132,7 @@ struct pcm_config pcm_config_primary_playback = {
 
 // PCM Configurations for Fast Playback Stream
 #define FAST_PLAYBACK_CARD              SOUND_CARD0
-#define FAST_PLAYBACK_DEVICE            SOUND_DEVICE_ABOX_RDMA1
+#define FAST_PLAYBACK_DEVICE            1
 
 #define FAST_PLAYBACK_CHANNELS          DEFAULT_MEDIA_CHANNELS
 #define FAST_PLAYBACK_SAMPLING_RATE     DEFAULT_MEDIA_SAMPLING_RATE
@@ -198,13 +198,13 @@ struct pcm_config pcm_config_fmradio_playback = {
 
 // PCM Configurations for DeepBuffer Playback Stream
 #define DEEP_PLAYBACK_CARD              SOUND_CARD0
-#define DEEP_PLAYBACK_DEVICE            SOUND_DEVICE_ABOX_RDMA2
+#define DEEP_PLAYBACK_DEVICE            SOUND_DEVICE_ABOX_RDMA3
 
-#define DEEP_PLAYBACK_CHANNELS          DEFAULT_MEDIA_CHANNELS
+#define DEEP_PLAYBACK_CHANNELS          1//DEFAULT_MEDIA_CHANNELS
 #define DEEP_PLAYBACK_SAMPLING_RATE     DEFAULT_MEDIA_SAMPLING_RATE
 #define DEEP_PLAYBACK_PERIOD_SIZE       960
 #define DEEP_PLAYBACK_PERIOD_COUNT      4
-#define DEEP_PLAYBACK_FORMAT            DEFAULT_MEDIA_FORMAT
+#define DEEP_PLAYBACK_FORMAT            3
 #define DEEP_PLAYBACK_START             DEEP_PLAYBACK_PERIOD_SIZE
 #define DEEP_PLAYBACK_STOP              UINT_MAX
 
@@ -350,7 +350,7 @@ struct compr_config compr_config_offload_playback = {
 #define BTSCO_PLAYBACK_SAMPLING_RATE    DEFAULT_MEDIA_SAMPLING_RATE
 #define BTSCO_PLAYBACK_PERIOD_SIZE      480
 #define BTSCO_PLAYBACK_PERIOD_COUNT     4
-#define BTSCO_PLAYBACK_FORMAT           DEFAULT_MEDIA_FORMAT
+#define BTSCO_PLAYBACK_FORMAT           1
 #define BTSCO_PLAYBACK_START            BTSCO_PLAYBACK_PERIOD_SIZE
 #define BTSCO_PLAYBACK_STOP             UINT_MAX
 
@@ -366,13 +366,13 @@ struct pcm_config pcm_config_btsco_playback = {
 
 // PCM Configurations for SpeakerAMP Playback Stream
 #define SPKAMP_PLAYBACK_CARD            SOUND_CARD0
-#define SPKAMP_PLAYBACK_DEVICE          SOUND_DEVICE_ABOX_RDMA7
+#define SPKAMP_PLAYBACK_DEVICE          7
 
-#define SPKAMP_PLAYBACK_CHANNELS        DEFAULT_MEDIA_CHANNELS
+#define SPKAMP_PLAYBACK_CHANNELS        4
 #define SPKAMP_PLAYBACK_SAMPLING_RATE   DEFAULT_MEDIA_SAMPLING_RATE
 #define SPKAMP_PLAYBACK_PERIOD_SIZE     480
 #define SPKAMP_PLAYBACK_PERIOD_COUNT    4
-#define SPKAMP_PLAYBACK_FORMAT          DEFAULT_MEDIA_FORMAT
+#define SPKAMP_PLAYBACK_FORMAT          1
 #define SPKAMP_PLAYBACK_START           SPKAMP_PLAYBACK_PERIOD_SIZE
 #define SPKAMP_PLAYBACK_STOP            UINT_MAX
 
@@ -436,13 +436,13 @@ struct pcm_config pcm_config_mixed_capture = {
 
 // PCM Configurations for ERAP In Stream
 #define ERAP_IN_CARD                    SOUND_CARD0
-#define ERAP_IN_DEVICE                  SOUND_DEVICE_ABOX_WDMA0
+#define ERAP_IN_DEVICE                  15
 
 #define ERAP_IN_CHANNELS                DEFAULT_MEDIA_CHANNELS
 #define ERAP_IN_SAMPLING_RATE           DEFAULT_MEDIA_SAMPLING_RATE
 #define ERAP_IN_PERIOD_SIZE             480
 #define ERAP_IN_PERIOD_COUNT            4
-#define ERAP_IN_FORMAT                  DEFAULT_MEDIA_FORMAT
+#define ERAP_IN_FORMAT                  1
 #define ERAP_IN_START                   ERAP_IN_PERIOD_SIZE
 #define ERAP_IN_STOP                    UINT_MAX
 
@@ -546,7 +546,7 @@ struct pcm_config pcm_config_mmap_capture = {
 
 // PCM Configurations for Voice TX Capture Stream
 #define VTX_CAPTURE_CARD                SOUND_CARD0
-#define VTX_CAPTURE_DEVICE              SOUND_DEVICE_ABOX_WDMA2
+#define VTX_CAPTURE_DEVICE              14
 
 #define VTX_CAPTURE_CHANNELS            DEFAULT_VOICE_CHANNELS
 #define VTX_CAPTURE_SAMPLING_RATE       DEFAULT_VOICE_SAMPLING_RATE
@@ -612,13 +612,13 @@ struct pcm_config pcm_config_out_loopback = {
 
 // PCM Configurations for Speaker AMP Reference Stream
 #define SPKAMP_REFERENCE_CARD           SOUND_CARD0
-#define SPKAMP_REFERENCE_DEVICE         SOUND_DEVICE_ABOX_WDMA4
+#define SPKAMP_REFERENCE_DEVICE         16
 
-#define SPKAMP_REFERENCE_CHANNELS       DEFAULT_MEDIA_CHANNELS
+#define SPKAMP_REFERENCE_CHANNELS       4
 #define SPKAMP_REFERENCE_SAMPLING_RATE  DEFAULT_MEDIA_SAMPLING_RATE
 #define SPKAMP_REFERENCE_PERIOD_SIZE    480
 #define SPKAMP_REFERENCE_PERIOD_COUNT   4
-#define SPKAMP_REFERENCE_FORMAT         DEFAULT_MEDIA_FORMAT
+#define SPKAMP_REFERENCE_FORMAT         1
 #define SPKAMP_REFERENCE_START          SPKAMP_REFERENCE_PERIOD_SIZE
 #define SPKAMP_REFERENCE_STOP           UINT_MAX
 
