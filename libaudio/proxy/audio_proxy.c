@@ -784,10 +784,8 @@ static void enable_internal_path(void *proxy, device_type target_device)
         enable_erap_in(aproxy);
     } else if (target_device == DEVICE_HEADSET || target_device == DEVICE_HEADPHONE ||
                target_device == DEVICE_EARPIECE|| target_device == DEVICE_CALL_FWD) {
-        if ((aproxy->audio_mode != AUDIO_MODE_IN_CALL) && (target_device == DEVICE_EARPIECE)) {
-            enable_spkamp_playback(aproxy);
-            enable_spkamp_reference(aproxy);
-        }
+        enable_spkamp_playback(aproxy);
+        enable_spkamp_reference(aproxy);
 
         // In cases of CP/AP Calland Loopback, ERAP Path is needed for SE
         // In case of Normal Media, ERAP Path is not needed
@@ -823,6 +821,9 @@ static void disable_internal_path(void *proxy, device_type target_device)
             disable_erap_in(aproxy);
         else if (is_usage_Loopback(aproxy->active_playback_ausage) && (target_device == DEVICE_EARPIECE))
             disable_erap_in(aproxy);
+
+        disable_spkamp_reference(aproxy);
+        disable_spkamp_playback(aproxy);
     }
 
     return ;
