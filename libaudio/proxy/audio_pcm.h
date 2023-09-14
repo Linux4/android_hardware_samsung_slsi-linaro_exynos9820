@@ -458,7 +458,7 @@ struct pcm_config pcm_config_erap_in = {
 
 // PCM Configurations for Primary Capture Stream
 #define PRIMARY_CAPTURE_CARD            SOUND_CARD0
-#define PRIMARY_CAPTURE_DEVICE          SOUND_DEVICE_ABOX_WDMA1
+#define PRIMARY_CAPTURE_DEVICE          13
 
 #define PRIMARY_CAPTURE_CHANNELS        DEFAULT_MEDIA_CHANNELS
 #define PRIMARY_CAPTURE_SAMPLING_RATE   DEFAULT_MEDIA_SAMPLING_RATE
@@ -480,7 +480,7 @@ struct pcm_config pcm_config_primary_capture = {
 
 // PCM Configurations for VoIP TX Stream
 #define VOIP_TX_CARD                    SOUND_CARD0
-#define VOIP_TX_DEVICE                  SOUND_DEVICE_ABOX_WDMA1
+#define VOIP_TX_DEVICE                  13
 
 #define VOIP_TX_CHANNELS                DEFAULT_MEDIA_CHANNELS
 #define VOIP_TX_SAMPLING_RATE           DEFAULT_MEDIA_SAMPLING_RATE
@@ -502,7 +502,7 @@ struct pcm_config pcm_config_voip_tx = {
 
 // PCM Configurations for Low Latency Capture Stream
 #define LOW_CAPTURE_CARD                SOUND_CARD0
-#define LOW_CAPTURE_DEVICE              SOUND_DEVICE_ABOX_WDMA1
+#define LOW_CAPTURE_DEVICE              13
 
 #define LOW_CAPTURE_CHANNELS            DEFAULT_MEDIA_CHANNELS
 #define LOW_CAPTURE_SAMPLING_RATE       DEFAULT_MEDIA_SAMPLING_RATE
@@ -524,7 +524,7 @@ struct pcm_config pcm_config_low_capture = {
 
 // PCM Configurations for MMAP Capture Stream
 #define MMAP_CAPTURE_CARD               SOUND_CARD0
-#define MMAP_CAPTURE_DEVICE             SOUND_DEVICE_ABOX_WDMA1
+#define MMAP_CAPTURE_DEVICE             13
 
 #define MMAP_CAPTURE_CHANNELS           DEFAULT_MEDIA_CHANNELS
 #define MMAP_CAPTURE_SAMPLING_RATE      DEFAULT_MEDIA_SAMPLING_RATE
