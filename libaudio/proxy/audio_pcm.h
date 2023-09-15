@@ -50,7 +50,7 @@
 
 /* Virtual DMA mapped Sound Card & Device Definition */
 #define SOUND_CARD1                     1
-
+#define SOUND_CARD_VIRT                 SOUND_CARD1
 
 /* Dump DMA mapped Sound Card & Device Definition */
 #define SOUND_CARD2                     2

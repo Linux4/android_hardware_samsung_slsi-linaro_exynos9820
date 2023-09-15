@@ -50,6 +50,7 @@ struct audio_proxy_stream
     int sound_device;
 
     struct pcm *pcm;
+    struct pcm *pcm_real;
     struct pcm_config pcmconfig;
 
     // Offload Specific

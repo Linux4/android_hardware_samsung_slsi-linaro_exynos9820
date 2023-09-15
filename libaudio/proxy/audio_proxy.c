@@ -2200,6 +2200,10 @@ int proxy_close_playback_stream(void *proxy_stream)
             ret = pcm_close(apstream->pcm);
             apstream->pcm = NULL;
         }
+        if (apstream->pcm_real) {
+            ret = pcm_close(apstream->pcm_real);
+            apstream->pcm_real = NULL;
+        }
         ALOGI("%s-%s: closed PCM Device", stream_table[apstream->stream_type], __func__);
     }
 
@@ -2264,6 +2268,30 @@ int proxy_open_playback_stream(void *proxy_stream, int32_t min_size_frames, void
             ALOGI("%s-%s: The opened PCM Device is %s with Sampling_Rate(%u) PCM_Format(%d)",
                   stream_table[apstream->stream_type], __func__, pcm_path,
                   apstream->pcmconfig.rate, apstream->pcmconfig.format);
+
+            if (apstream->stream_type == ASTREAM_PLAYBACK_PRIMARY) {
+                if (!pcm_start(apstream->pcm)) {
+                    ALOGI("proxy-%s: PCM Device(%s) with SR(%u) PF(%d) CC(%d) is started",
+                         __func__, pcm_path, apstream->pcmconfig.rate, apstream->pcmconfig.format,
+                         apstream->pcmconfig.channels);
+
+                    apstream->pcm_real = apstream->pcm;
+                    apstream->pcm = pcm_open(SOUND_CARD_VIRT, sound_device, flags, &apstream->pcmconfig);
+                    if (!apstream->pcm || pcm_is_ready(apstream->pcm) != 0) {
+                        snprintf(pcm_path, sizeof(pcm_path), "/dev/snd/pcmC%uD%u%c", SOUND_CARD_VIRT, sound_device, 'p');
+                        ALOGI("%s-%s: The opened Virtual PCM Device is %s with Sampling_Rate(%u) PCM_Format(%d) "
+                              " PCM_start-threshold(%d) PCM_stop-threshold(%d)",
+                              stream_table[apstream->stream_type], __func__, pcm_path,
+                              apstream->pcmconfig.rate, apstream->pcmconfig.format,
+                              apstream->pcmconfig.start_threshold, apstream->pcmconfig.stop_threshold);
+                    } else {
+                        ALOGE("%s-%s: Virtual PCM Device is not ready with Sampling_Rate(%u) error (%s)!",
+                              stream_table[apstream->stream_type], __func__, apstream->pcmconfig.rate,
+                              pcm_get_error(apstream->pcm));
+                        goto err_open;
+                    }
+                }
+            }
 
             apstream->compress = NULL;
 
